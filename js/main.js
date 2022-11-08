@@ -28,12 +28,16 @@ function getInputValue(){
     let discount_minors_arrotondato = (discount_minors).toFixed(2);
     let discount_over_arrotondato = (discount_over).toFixed(2);
 
+    console.log("norm arrotondato",pezzo_km_arrotondato);
+    console.log("min arrotondato",discount_minors_arrotondato);
+    console.log("over arrotondato",discount_over_arrotondato);
+
 
 // Condizioni
-if(eta = "min"){
+if(eta == "min"){
 document.getElementById("prezzo_finale").innerHTML = `${discount_minors_arrotondato} €`;
 
-} else if(eta = "over"){
+} else if(eta == "over"){
 document.getElementById("prezzo_finale").innerHTML = `${discount_over_arrotondato} €`;
 
 } else {
