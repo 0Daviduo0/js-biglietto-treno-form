@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket</title>
+</head>
+<body>
+   
+        <!-- User input -->
+        <form id="userInput" onsubmit="return false">
+            <input type="text" id="nome" name="username" placeholder="Nome e cognome" required>
+            <input type="number" id="km" name="chilometri" min="1" max="9999" placeholder="Quanti km?" required>
+            <select id="eta" required>
+                <option value="min">Minorenne</option>
+                <option value="maggiorenne">18+</option>
+                <option value="over">65+</option>
+              </select>
+            <button type="submit" onclick="getInputValue();">Scopri il tuo biglietto</button>
+          </form>
+    
+
+    <div id="prezzo_finale">
+        
+    </div>
+ 
+    <script src="js/main.js"></script>
+</body>
+</html>
