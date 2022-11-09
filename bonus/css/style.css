@@ -16,6 +16,10 @@
     --form-inputs-border-radius: 20px;
     --submit-color: #aa87c883;
     --ticket-card-background-color: rgba(173, 154, 218, 0.329);
+    --checkout-container-background-color: rgba(168, 142, 228, 0.479);
+    --checkout-title-background-color: rgba(168, 142, 228, 0.63);
+    --price-background-color: rgba(150, 129, 201, 0.5);
+    --buy-background-color: rgba(114, 85, 182, 0.548);
 }
 
 /* rapid classes */
@@ -137,7 +141,6 @@ body{
                 background-color: var(--background-card_inside);
                 border-radius: 20px;
                 display: flex;
-                justify-content: center;
                 padding: 25px 0;
                 background-color: var(--ticket-card-background-color);
             }
@@ -145,3 +148,115 @@ body{
             .display_none{
                 display: none;
             }
+
+                .ticket_data{
+                    width: 250px;
+                    padding: 20px;
+                }
+
+                    .same_line.for_ticket{
+                        width: 210px;
+                    }
+
+                    .data_container_text{
+                        width: 130px;
+                        height: 25px;
+                        text-align: center;
+                        background-color: var(--form-inputs-background-color);
+                        border: none;
+                        border-radius: var(--form-inputs-border-radius);
+                    }
+
+                    .data_container_text.small{
+                        width: 60px;
+                    }
+
+                    .name_container{
+                        color: var(--bold-text-color);
+                        font-weight: 600;
+                    }
+
+                    #discount_container{
+                        color: var(--bold-text-color);
+                        font-weight: 600;
+                        background: linear-gradient(169deg, #af81f0, #5f319f, #bc9de8);
+                        background-size: 600% 600%;
+
+                        animation: discount_background 5s ease infinite;
+                    }
+
+                    @keyframes discount_background {
+                        0%
+                        {background-position:35% 0%}
+
+                        50%
+                        {background-position:66% 100%}
+                        
+                        100%
+                        {background-position:35% 0%}
+                    }
+
+                    .km_container{
+                        width: 210px;
+                        height: 40px;
+                        font-size: 25px;
+                        font-weight: 800;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: var(--bold-text-color);
+                    }
+
+                .checkout_container{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 20px;
+                    padding: 10px 5px;
+                    width: 210px;
+                    height: 190px;
+                    background-color: var(--checkout-container-background-color);
+                    border-radius: var(--form-inputs-border-radius);
+                }
+
+                    .checkout_title{
+                        width: 200px;
+                        height: 30px;
+                        background-color: var(--checkout-title-background-color);
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: var(--bold-text-color);
+                        margin-bottom: 10px;
+                    }
+
+                    .prezzo_container{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 200px;
+                        height: 90px;
+                        background-color: var(--price-background-color);
+                        margin-bottom: 10px;
+                        font-size: 30px;
+                        font-weight: 800;
+                        color: var(--bold-text-color);
+                    }
+
+                        #prezzo_finale{
+                            transform: scale(1, 2);
+                            font-stretch: condensed;
+                        }
+
+                    .buy{
+                        width: 200px;
+                        height: 30px;
+                        background-color: var(--buy-background-color);
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: var(--bold-text-color);
+                    }
+
+
+
+                .ticket_qr{
+                    width: 250px;
+                }

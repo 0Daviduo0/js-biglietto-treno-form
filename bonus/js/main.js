@@ -1,11 +1,17 @@
 // Richiesta nome
 function getInputValue(){
+    let element = document.getElementById("ticket_card");
+    element.classList.remove("display_none");
+
     let nome = document.getElementById("nome").value;
     let km = document.getElementById("km").value;
     let eta = document.getElementById("eta").value;
     console.log("nome",nome);
     console.log("km",km);
     console.log("età",eta);
+
+    document.getElementById("name_container").innerHTML = `${nome}`;
+    document.getElementById("km_container").innerHTML = `${km} KM`;
 
     // Calcolo prezzo in base alla distanza
     let prezzo_km = km * 0.21;
@@ -36,12 +42,15 @@ function getInputValue(){
 // Condizioni
 if(eta == "min"){
 document.getElementById("prezzo_finale").innerHTML = `${discount_minors_arrotondato} €`;
+document.getElementById("discount_container").innerHTML = `20%`;
 
 } else if(eta == "over"){
 document.getElementById("prezzo_finale").innerHTML = `${discount_over_arrotondato} €`;
+document.getElementById("discount_container").innerHTML = `40%`;
 
 } else {
 document.getElementById("prezzo_finale").innerHTML = `${pezzo_km_arrotondato} €`;
+document.getElementById("discount_container").innerHTML = `---`;
 }
 }
 
