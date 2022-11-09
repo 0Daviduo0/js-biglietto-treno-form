@@ -272,7 +272,7 @@ body{
                 .ticket_qr{
                     width: 250px;
                     height: 310px;
-                    padding: 20px;
+                    margin: 20px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -282,7 +282,9 @@ body{
                     #qr_code{
                         width: 150px;
                         height: 150px;
-                        padding-bottom: 10px;
+                        margin-bottom: 20px;
+                        border-radius: 15px;
+                        overflow: hidden;
                     }
                    
                     .warn_container{
