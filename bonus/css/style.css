@@ -8,15 +8,26 @@
 
 /* General values */
 :root{
-    --background-card: rgba(255, 255, 255, 0.326);
+    --background-card: rgba(255, 255, 255, 0.445);
+    --background-card_inside: #fff;
     --bold-text-color: #fff;
+    --form-spacings: 10px;
+    --form-inputs-background-color: rgba(168, 168, 168, 0.356);
+    --form-inputs-border-radius: 20px;
+    --submit-color: #aa87c883;
+    --ticket-card-background-color: rgba(173, 154, 218, 0.329);
 }
+
+/* rapid classes */
+/* .display_none{
+    display: none;
+} */
 
 
 body{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    background-image: url(../img/train-mountains-illustration-minimalistic-9l.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -26,13 +37,14 @@ body{
 }
 
     .generatore_biglietto{
-        width: 500px;
-        height: 800px;
+        max-width: 500px;
         border-radius: 20px;
         background-color: var(--background-card);
+        margin-top: 40px;
         margin-bottom: 40px;
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
     }
 
         .titolo{
@@ -42,3 +54,94 @@ body{
             font-size: 35px;
             color: var(--bold-text-color);
         }
+
+            .inside_card{
+                max-width: 500px;
+                background-color: var(--background-card_inside);
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                padding: 35px 0 0 0;
+            }
+
+                .input_container{
+                    display: flex;
+                    justify-content: center;
+                    width: 500px;
+                }
+
+                    .richiesta_nome{
+                        width: 300px;
+                        margin-bottom: var(--form-spacings);
+                    }
+                    
+                    #nome{
+                        width: 100%;
+                        height: 30px;
+                        font-size: 20px;
+                        text-align: center;
+                        background-color: var(--form-inputs-background-color);
+                        border: none;
+                        border-radius: var(--form-inputs-border-radius);
+                    }
+
+                    .same_line{
+                        width: 300px;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: var(--form-spacings);
+
+                    }
+                        
+                        .richiesta_km{
+                            width: 40%;
+                        }
+
+                            #km{
+                                width: 100%;
+                                text-align: center;
+                                background-color: var(--form-inputs-background-color);
+                                border: none;
+                                border-radius: var(--form-inputs-border-radius);
+                            }
+
+                        .richiesta_eta{
+                            width: 50%;
+                        }
+
+                            #eta{
+                                width: 100%;
+                                text-align: center;
+                                background-color: var(--form-inputs-background-color);
+                                border: none;
+                                border-radius: var(--form-inputs-border-radius);
+                            }
+
+                        #submit_button{
+                            width: 300px;
+                            height: 30px;
+                            margin-bottom: 35px;
+                            font-size: 20px;
+                            font-weight: 700;
+                            color: var(--bold-text-color);
+                            text-align: center;
+                            border: none;
+                            background-color: var(--submit-color);
+                            border-radius: var(--form-inputs-border-radius);
+                            background-color: var(--submit-color);
+                        }
+
+            .ticket_card{
+                width: 500px;
+                height: 350px;
+                background-color: var(--background-card_inside);
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                padding: 25px 0;
+                background-color: var(--ticket-card-background-color);
+            }
+
+            .display_none{
+                display: none;
+            }

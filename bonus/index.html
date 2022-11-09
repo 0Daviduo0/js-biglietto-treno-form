@@ -14,10 +14,51 @@
 </head>
 <body>
    
+      
         <div class="generatore_biglietto">
 
           <div class="titolo">
             GENERA IL TUO BIGLIETTO
+          </div>
+
+          <div class="inside_card">
+            <div class="input_container">
+              <form id="userInput" onsubmit="return false">
+                  <!-- Nome -->
+                  <div class="richiesta_nome">
+                    <div class="user_input">
+                      <input type="text" id="nome" name="username" placeholder="Nome e cognome" required>
+                    </div>
+                  </div>
+
+                  <div class="same_line">
+                    <!-- km -->
+                    <div class="richiesta_km">
+                      <div class="user_input">
+                        <input type="number" id="km" name="chilometri" min="1" max="9999" placeholder="km?" required>
+                      </div>
+                    </div>
+                    <!-- età -->
+                    <div class="richiesta_eta">
+                      <div class="user_input">
+                        <select id="eta" required>
+                          <option value="min">Minorenne</option>
+                          <option value="maggiorenne">18+</option>
+                          <option value="over">65+</option>
+                        </select>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- pulsanti -->
+                <button id="submit_button" type="submit" onclick="getInputValue();">SCOPRI IL TUO BIGLIETTO</button>
+              </form>
+            </div> 
+
+              <div class="ticket_card">
+
+              </div>
+
           </div>
 
         </div>
@@ -25,25 +66,16 @@
 
 
 
-<!--    User input
+        <!--    User input  -->
 
-        <form id="userInput" onsubmit="return false">
-            <input type="text" id="nome" name="username" placeholder="Nome e cognome" required>
-            <input type="number" id="km" name="chilometri" min="1" max="9999" placeholder="Quanti km?" required>
-            <select id="eta" required>
-                <option value="min">Minorenne</option>
-                <option value="maggiorenne">18+</option>
-                <option value="over">65+</option>
-              </select>
-            <button type="submit" onclick="getInputValue();">Scopri il tuo biglietto</button>
-          </form>
+        
     
 
-    <div id="prezzo_finale">
+    <!-- <div id="prezzo_finale">
         
-    </div>
+    </div> -->
 
--->
+
  
     <script src="js/main.js"></script>
 </body>
