@@ -1,7 +1,10 @@
 // Richiesta nome
 function getInputValue(){
+    
     let element = document.getElementById("ticket_card");
     element.classList.remove("display_none");
+
+    
 
     let nome = document.getElementById("nome").value;
     let km = document.getElementById("km").value;
@@ -52,6 +55,7 @@ document.getElementById("discount_container").innerHTML = `40%`;
 document.getElementById("prezzo_finale").innerHTML = `${pezzo_km_arrotondato} €`;
 document.getElementById("discount_container").innerHTML = `---`;
 }
+
 }
 
 
